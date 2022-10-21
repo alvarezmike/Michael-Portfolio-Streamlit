@@ -3,6 +3,12 @@ import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 from bokeh.models.widgets import Div
+import webbrowser
+
+NBA_WEB_APP = "https://alvarezmike-nba-streamlit-app-gmo44q.streamlitapp.com/"
+NBA_WEB_APP_CODE = "https://github.com/alvarezmike/NBA-Streamlit"
+TINDOG = "https://alvarezmike.github.io/TinDog-Advertisement/"
+TINDOG_CODE = "https://github.com/alvarezmike/TinDog-Advertisement"
 
 # For more emojis code https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Portfolio", page_icon=":computer:", layout="wide")
@@ -29,10 +35,15 @@ img_password_manager = Image.open("images/passwordmanager.png")
 
 # -- header section
 with st.container():
-    st.subheader("Hi, I am Michael :wave:")
-    st.title("A Software Engineer")
-    st.subheader("Turning ideas into well developed products is my calling")
-    st.write("[See some of my codes >](https://github.com/alvarezmike)")
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.subheader("Hi, I am Michael :wave:")
+        st.title("A Software Engineer")
+        st.subheader("Turning ideas into well developed products is my calling")
+        st.write("[See some of my codes >](https://github.com/alvarezmike)")
+
+    with right_column:
+        st_lottie(lottie_coding, height=300, key="coding_1")
 
 # -- What I Do
 with st.container():
@@ -65,20 +76,13 @@ with st.container():
     col1, col2, col3 = st.columns(3)
     with col1:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
-        st.subheader("Excel Row Splitter")
-        st.write("Splits large xlsx/csv files at a given row and saves it in new xlsx/csv files.")
-        if st.button('Enter App', key="ews_enter"):
-            js = "window.open('https://github.com/ratherUsefulCode')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.write('Web Application opens in new browser tab')
-            st.bokeh_chart(div)
-        if st.button('Github', key="ews_github"):
-            st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/ratherUsefulCode/excel-row-splitter')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
+        st.subheader("NBA Data Web App")
+        st.write("Web scrapes data and formats into a beautiful stats display web app where you "
+                 "can select data based on year and teams as well as player roles. ")
+        if st.button("See it live", key="nba_live"):
+            webbrowser.open_new_tab(NBA_WEB_APP)
+        if st.button("Code", key="nba_code"):
+            webbrowser.open_new_tab(NBA_WEB_APP_CODE)
     with col2:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Github E-Mail Exposer")
@@ -129,16 +133,12 @@ with st.container():
             st.bokeh_chart(div)
     with col5:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
-        st.subheader("Portfolio Website made with Streamlit")
-        st.write("Portfolio Website made with Python/Streamlit.")
-        if st.button('Enter App', key="spw_enter"):
-            st.write('You are already on the streamlit portfolio website 😃')
-        if st.button('Github', key="spw_github"):
-            st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/ratherUsefulCode/streamlit-portfolio-page')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
+        st.subheader("Advertisement Web Page")
+        st.write("Tinder but for our four-legged friend's web")
+        if st.button("See it live", key="tindog_live"):
+            webbrowser.open_new_tab(TINDOG)
+        if st.button("Code", key="tindog_code"):
+            webbrowser.open_new_tab(TINDOG_CODE)
     with col6:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Portfolio Website made with Bootstrap")
