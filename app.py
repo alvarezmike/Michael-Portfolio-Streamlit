@@ -7,11 +7,13 @@ import webbrowser
 
 NBA_WEB_APP = "https://alvarezmike-nba-streamlit-app-gmo44q.streamlitapp.com/"
 NBA_WEB_APP_CODE = "https://github.com/alvarezmike/NBA-Streamlit"
+STOCK_STREAMLIT = "https://alvarezmike-stock-streamlit-app-dscgjt.streamlitapp.com/"
+STOCK_CODE = "https://github.com/alvarezmike/Stock-Streamlit"
 TINDOG = "https://alvarezmike.github.io/TinDog-Advertisement/"
 TINDOG_CODE = "https://github.com/alvarezmike/TinDog-Advertisement"
 
 # For more emojis code https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="Portfolio", page_icon=":computer:", layout="wide")
+st.set_page_config(page_title="Michael-Portfolio", page_icon=":computer:", layout="wide")
 
 
 def load_lottieur(url):
@@ -30,47 +32,27 @@ def local_css(file_name):
 local_css("style/style.css")
 
 # -- Load assets
-lottie_coding = load_lottieur("https://assets5.lottiefiles.com/packages/lf20_iv4dsx3q.json")
+lottie_coding = load_lottieur("https://assets2.lottiefiles.com/packages/lf20_l4fgppor.json")
 img_password_manager = Image.open("images/passwordmanager.png")
 
 # -- header section
 with st.container():
     left_column, right_column = st.columns(2)
     with left_column:
-        st.subheader("Hi, I am Michael :wave:")
+        st.header("Hi, I am Michael :wave:")
         st.title("A Software Engineer")
         st.subheader("Turning ideas into well developed products is my calling")
-        st.write("[See some of my codes >](https://github.com/alvarezmike)")
+        st.write("[Visit my Github](https://github.com/alvarezmike)")
 
     with right_column:
         st_lottie(lottie_coding, height=300, key="coding_1")
 
-# -- What I Do
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    with left_column:
-        st.header("What I do")
-        st.write("##")
-        st.write(
-            """
-            dgdggdgdgdgdgdgdgdg
-            - sddgdgdggdgd
-            - ddgdgdggdddhdhdhdh
-            - dhdhhdhdhdhdhd
-            - ahhaagagagag
 
-            If this sounds interesting to you, coonsider subscribing shsushbbddbb
-            """
-        )
-        st.write("[Youtube channel] > link here")
-    with right_column:
-        st_lottie(lottie_coding, height=300, key="coding")
 
 # -- Projects
 with st.container():
     st.write("---")
-    st.header("Portfolio")
+    st.subheader("Portfolio")
     st.write("##")
 
     col1, col2, col3 = st.columns(3)
@@ -81,24 +63,16 @@ with st.container():
                  "can select data based on year and teams as well as player roles. ")
         if st.button("See it live", key="nba_live"):
             webbrowser.open_new_tab(NBA_WEB_APP)
-        if st.button("Code", key="nba_code"):
+        if st.button("View Code", key="nba_code"):
             webbrowser.open_new_tab(NBA_WEB_APP_CODE)
     with col2:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
-        st.subheader("Github E-Mail Exposer")
-        st.write("Expose all E-Mail addresses contributing to a given Github account.")
-        if st.button('Enter App', key="gee_enter"):
-            js = "window.open('https://github.com/ratherUsefulCode/github-email-exposer')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.write('Web Application opens in new browser tab')
-            st.bokeh_chart(div)
-        if st.button('Github', key="gee_github"):
-            st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/ratherUsefulCode/github-email-exposer')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
+        st.subheader("Stock Price Web App")
+        st.write("Retrieves company information as well as the stock price data.")
+        if st.button('See it live', key="stock_live"):
+            webbrowser.open_new_tab(STOCK_STREAMLIT)
+        if st.button('View Code', key="gee_github"):
+            webbrowser.open_new_tab(STOCK_CODE)
     with col3:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Crypto Currency Watchlist")
