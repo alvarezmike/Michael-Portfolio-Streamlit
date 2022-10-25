@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
-from bokeh.models.widgets import Div
 import webbrowser
 
 NBA_WEB_APP = "https://alvarezmike-nba-streamlit-app-gmo44q.streamlitapp.com/"
@@ -53,7 +52,6 @@ with st.container():
 with st.container():
     st.write("---")
     st.subheader("Portfolio")
-    st.write("##")
 
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -96,32 +94,24 @@ with st.container():
     with col5:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Advertisement Web Page")
-        st.write("Tinder but for our four-legged friend's web")
+        st.write("Tinder but for our four-legged friend's web.")
         if st.button("See it live", key="tindog_live"):
             webbrowser.open_new_tab(TINDOG)
         if st.button("View Code", key="tindog_code"):
             webbrowser.open_new_tab(TINDOG_CODE)
     with col6:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
-        st.subheader("Portfolio Website made with Bootstrap")
-        st.write("Portfolio Website made with HTML/Bootstrap.")
-        if st.button('Enter App'):
-            js = "window.open('https://rather.to')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
-            st.write('Web Application opens in new browser tab')
-        if st.button('Github', key="bpw_github"):
-            js = "window.open('https://github.com/ratherUsefulCode/rather-to')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
+        st.subheader("Responsive Portfolio Website ")
+        st.write("Portfolio Website made with HTML/CSS/JS.")
+        if st.button('See it live', key="responsive_live"):
+            webbrowser.open_new_tab("https://alvarezmike.github.io/Responsive-Portfolio/")
+        if st.button('View Code', key="responsive_code"):
+            webbrowser.open_new_tab("https://github.com/alvarezmike/Responsive-Portfolio")
 
 # -- contact
 with st.container():
     st.write("---")
-    st.header("Get in touch with me")
-    st.write("##")
+    st.subheader("Get in touch with me")
 
     contact_form = """
     <form action="https://formsubmit.co/kerer74@gmail.com" method="POST">
