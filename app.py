@@ -71,24 +71,16 @@ with st.container():
         st.write("Retrieves company information as well as the stock price data.")
         if st.button('See it live', key="stock_live"):
             webbrowser.open_new_tab(STOCK_STREAMLIT)
-        if st.button('View Code', key="gee_github"):
+        if st.button('View Code', key="stock_code"):
             webbrowser.open_new_tab(STOCK_CODE)
     with col3:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
-        st.subheader("Crypto Currency Watchlist")
-        st.write("Django web application that shows some basic data of your favourite crypto currencies.")
-        if st.button('Enter App', key="ccw_enter"):
-            js = "window.open('https://crypto-watchlist-rather-to.herokuapp.com/')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.write('Web Application opens in new browser tab')
-            st.bokeh_chart(div)
-        if st.button('Github', key="ccw_github"):
-            st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/ratherUsefulCode/')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
+        st.subheader("Password Manager")
+        st.write("Tkinter GUI App that manages all your passwords.")
+        if st.button('Video Demo', key="pass_demo_video"):
+            webbrowser.open_new_tab("https://github.com/alvarezmike/100daysOfPython/blob/main/Day30/Day30.md")
+        if st.button('View Code', key="pass_code"):
+            webbrowser.open_new_tab("https://github.com/alvarezmike/100daysOfPython/tree/main/Day30/improved-password-manager")
 
 
 with st.container():
