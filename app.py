@@ -87,23 +87,19 @@ with st.container():
     col4, col5, col6 = st.columns(3)
     with col4:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
-        st.subheader("QR Codes Reader and Generator")
-        st.write("Create and/or read every QR code.")
-        if st.button('Enter App', key="qrc_enter"):
-            st.write('Web Application opens in new browser tab')
-        if st.button('Github', key="qrc_github"):
-            st.write('Github opens in new browser tab')
-            js = "window.open('https://github.com/ratherUsefulCode/github-email-exposer')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
+        st.subheader("Data Entry Desktop App")
+        st.write("Tkinter GUI with MySQL database connection.")
+        if st.button('Video Demo', key="data_video"):
+            webbrowser.open_new_tab("https://github.com/alvarezmike/CRUDApp/blob/main/README.md")
+        if st.button('View Code', key="data_code"):
+            webbrowser.open_new_tab("https://github.com/alvarezmike/CRUDApp")
     with col5:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Advertisement Web Page")
         st.write("Tinder but for our four-legged friend's web")
         if st.button("See it live", key="tindog_live"):
             webbrowser.open_new_tab(TINDOG)
-        if st.button("Code", key="tindog_code"):
+        if st.button("View Code", key="tindog_code"):
             webbrowser.open_new_tab(TINDOG_CODE)
     with col6:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
