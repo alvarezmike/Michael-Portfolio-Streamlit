@@ -3,6 +3,7 @@ import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 import webbrowser
+from pathlib import Path
 
 NBA_WEB_APP = "https://alvarezmike-nba-streamlit-app-gmo44q.streamlitapp.com/"
 NBA_WEB_APP_CODE = "https://github.com/alvarezmike/NBA-Streamlit"
@@ -10,6 +11,14 @@ STOCK_STREAMLIT = "https://alvarezmike-stock-streamlit-app-dscgjt.streamlitapp.c
 STOCK_CODE = "https://github.com/alvarezmike/Stock-Streamlit"
 TINDOG = "https://alvarezmike.github.io/TinDog-Advertisement/"
 TINDOG_CODE = "https://github.com/alvarezmike/TinDog-Advertisement"
+
+# Path settings
+current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+resume_file = current_dir/"Michael Alvarez Resume.pdf"
+
+# Load PDF
+with open(resume_file, "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
 
 # For more emojis code https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Michael-Portfolio", page_icon=":computer:", layout="wide")
@@ -42,6 +51,12 @@ with st.container():
         st.title("A Software Engineer")
         st.subheader("Turning ideas into well developed products is my calling")
         st.write("[Visit my Github](https://github.com/alvarezmike)")
+        st.download_button(
+            label=" 📄 Download Resume",
+            data=PDFbyte,
+            file_name=resume_file.name,
+            mime="application/octet-stream",
+        )
 
     with right_column:
         st_lottie(lottie_coding, height=300, key="coding_1")
