@@ -118,8 +118,11 @@ with st.container():
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Responsive Portfolio Website ")
         st.write("Portfolio Website made with HTML/CSS/JS.")
-        st.button('See it live',"https://alvarezmike.github.io/Responsive-Portfolio/" )
-            # webbrowser.open_new_tab("https://alvarezmike.github.io/Responsive-Portfolio/")
+        st.markdown(f'''
+        <a href={"https://alvarezmike.github.io/Responsive-Portfolio/"}><button style="background-color:GreenYellow;">See it live</button></a>
+        ''',
+                    unsafe_allow_html=True)
+
         if st.button('View Code', key="responsive_code"):
             webbrowser.open_new_tab("https://github.com/alvarezmike/Responsive-Portfolio")
 
