@@ -5,12 +5,18 @@ from PIL import Image
 import webbrowser
 from pathlib import Path
 
+# LINKS PROJECTS
 NBA_WEB_APP = "https://alvarezmike-nba-streamlit-app-gmo44q.streamlitapp.com/"
 NBA_WEB_APP_CODE = "https://github.com/alvarezmike/NBA-Streamlit"
 STOCK_STREAMLIT = "https://alvarezmike-stock-streamlit-app-dscgjt.streamlitapp.com/"
 STOCK_CODE = "https://github.com/alvarezmike/Stock-Streamlit"
 TINDOG = "https://alvarezmike.github.io/TinDog-Advertisement/"
 TINDOG_CODE = "https://github.com/alvarezmike/TinDog-Advertisement"
+CRUD_VIDEO = "https://github.com/alvarezmike/CRUDApp/blob/main/README.md"
+CRUD_CODE = "https://github.com/alvarezmike/CRUDApp"
+PASSWORD_MANAGER_VIDEO = "https://github.com/alvarezmike/100daysOfPython/blob/main/Day30/Day30.md"
+PASSWORD_MANAGER_CODE = "https://github.com/alvarezmike/100daysOfPython/tree/main/Day30/improved-password-manager"
+
 
 # Path settings
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
@@ -74,26 +80,38 @@ with st.container():
         st.subheader("NBA Data Web App")
         st.write("Web scrapes data and formats into a beautiful stats display web app where you "
                  "can select data based on year and teams as well as player roles. ")
-        if st.button("See it live", key="nba_live"):
-            webbrowser.open_new_tab(NBA_WEB_APP)
-        if st.button("View Code", key="nba_code"):
-            webbrowser.open_new_tab(NBA_WEB_APP_CODE)
+        st.markdown(f'''
+                    <a href={NBA_WEB_APP}><button style="background-color:GreenYellow;">See it live</button></a>
+                    ''',
+                    unsafe_allow_html=True)
+        st.markdown(f'''
+                    <a href={NBA_WEB_APP_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                    ''',
+                    unsafe_allow_html=True)
     with col2:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Stock Price Web App")
         st.write("Retrieves company information as well as the stock price data.")
-        if st.button('See it live', key="stock_live"):
-            webbrowser.open_new_tab(STOCK_STREAMLIT)
-        if st.button('View Code', key="stock_code"):
-            webbrowser.open_new_tab(STOCK_CODE)
+        st.markdown(f'''
+                    <a href={STOCK_STREAMLIT}><button style="background-color:GreenYellow;">See it live</button></a>
+                    ''',
+                    unsafe_allow_html=True)
+        st.markdown(f'''
+                    <a href={STOCK_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                    ''',
+                    unsafe_allow_html=True)
     with col3:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Password Manager")
         st.write("Tkinter GUI App that manages all your passwords.")
-        if st.button('Video Demo', key="pass_demo_video"):
-            webbrowser.open_new_tab("https://github.com/alvarezmike/100daysOfPython/blob/main/Day30/Day30.md")
-        if st.button('View Code', key="pass_code"):
-            webbrowser.open_new_tab("https://github.com/alvarezmike/100daysOfPython/tree/main/Day30/improved-password-manager")
+        st.markdown(f'''
+                    <a href={PASSWORD_MANAGER_VIDEO}><button style="background-color:GreenYellow;">Video Demo</button></a>
+                    ''',
+                    unsafe_allow_html=True)
+        st.markdown(f'''
+                    <a href={PASSWORD_MANAGER_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                        ''',
+                    unsafe_allow_html=True)
 
 
 with st.container():
@@ -102,18 +120,26 @@ with st.container():
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Data Entry Desktop App")
         st.write("Tkinter GUI with MySQL database connection.")
-        if st.button('Video Demo', key="data_video"):
-            webbrowser.open_new_tab("https://github.com/alvarezmike/CRUDApp/blob/main/README.md")
-        if st.button('View Code', key="data_code"):
-            webbrowser.open_new_tab("https://github.com/alvarezmike/CRUDApp")
+        st.markdown(f'''
+                    <a href={CRUD_VIDEO}><button style="background-color:GreenYellow;">Video Demo</button></a>
+                    ''',
+                    unsafe_allow_html=True)
+        st.markdown(f'''
+                    <a href={CRUD_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                    ''',
+                    unsafe_allow_html=True)
     with col5:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Advertisement Web Page")
         st.write("Tinder but for our four-legged friend's web.")
-        if st.button("See it live", key="tindog_live"):
-            webbrowser.open_new_tab(TINDOG)
-        if st.button("View Code", key="tindog_code"):
-            webbrowser.open_new_tab(TINDOG_CODE)
+        st.markdown(f'''
+                    <a href={TINDOG}><button style="background-color:GreenYellow;">See it live</button></a>
+                    ''',
+                    unsafe_allow_html=True)
+        st.markdown(f'''
+                    <a href={TINDOG_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                    ''',
+                    unsafe_allow_html=True)
     with col6:
         st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
         st.subheader("Responsive Portfolio Website ")
@@ -122,9 +148,10 @@ with st.container():
         <a href={"https://alvarezmike.github.io/Responsive-Portfolio/"}><button style="background-color:GreenYellow;">See it live</button></a>
         ''',
                     unsafe_allow_html=True)
-
-        if st.button('View Code', key="responsive_code"):
-            webbrowser.open_new_tab("https://github.com/alvarezmike/Responsive-Portfolio")
+        st.markdown(f'''
+                <a href={"https://github.com/alvarezmike/Responsive-Portfolio"}><button style="background-color:GreenYellow;">View Code</button></a>
+                ''',
+                    unsafe_allow_html=True)
 
 # -- contact
 with st.container():
