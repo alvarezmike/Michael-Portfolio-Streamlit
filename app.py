@@ -81,11 +81,11 @@ with st.container():
         st.write("Web scrapes data and formats into a beautiful stats display web app where you "
                  "can select data based on year and teams as well as player roles. ")
         st.markdown(f'''
-                    <a href={NBA_WEB_APP}><button style="background-color:GreenYellow;">See it live</button></a>
+                    <a href={NBA_WEB_APP}><button style="background-color:#04AA6D; color:white;border:none;border-radius:4px;">See it live</button></a>
                     ''',
                     unsafe_allow_html=True)
         st.markdown(f'''
-                    <a href={NBA_WEB_APP_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                    <a href={NBA_WEB_APP_CODE}><button style="background-color:greenyellow; color:black;border:none;border-radius:4px;">View Code</button></a>
                     ''',
                     unsafe_allow_html=True)
     with col2:
@@ -93,11 +93,11 @@ with st.container():
         st.subheader("Stock Price Web App")
         st.write("Retrieves company information as well as the stock price data.")
         st.markdown(f'''
-                    <a href={STOCK_STREAMLIT}><button style="background-color:GreenYellow;">See it live</button></a>
+                    <a href={STOCK_STREAMLIT}><button style="background-color:#04AA6D; color:white;border:none;border-radius:4px;">See it live</button></a>
                     ''',
                     unsafe_allow_html=True)
         st.markdown(f'''
-                    <a href={STOCK_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                    <a href={STOCK_CODE}><button style="background-color:greenyellow; color:black;border:none;border-radius:4px;">View Code</button></a>
                     ''',
                     unsafe_allow_html=True)
     with col3:
@@ -105,11 +105,11 @@ with st.container():
         st.subheader("Password Manager")
         st.write("Tkinter GUI App that manages all your passwords.")
         st.markdown(f'''
-                    <a href={PASSWORD_MANAGER_VIDEO}><button style="background-color:GreenYellow;">Video Demo</button></a>
+                    <a href={PASSWORD_MANAGER_VIDEO}><button style="background-color:#04AA6D; color:white;border:none;border-radius:4px;">Video Demo</button></a>
                     ''',
                     unsafe_allow_html=True)
         st.markdown(f'''
-                    <a href={PASSWORD_MANAGER_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                    <a href={PASSWORD_MANAGER_CODE}><button style="background-color:greenyellow; color:black;border:none;border-radius:4px;">View Code</button></a>
                         ''',
                     unsafe_allow_html=True)
 
@@ -121,11 +121,11 @@ with st.container():
         st.subheader("Data Entry Desktop App")
         st.write("Tkinter GUI with MySQL database connection.")
         st.markdown(f'''
-                    <a href={CRUD_VIDEO}><button style="background-color:GreenYellow;">Video Demo</button></a>
+                    <a href={CRUD_VIDEO}><button style="background-color:#04AA6D; color:white;border:none;border-radius:4px;">Video Demo</button></a>
                     ''',
                     unsafe_allow_html=True)
         st.markdown(f'''
-                    <a href={CRUD_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                    <a href={CRUD_CODE}><button style="background-color:greenyellow; color:black;border:none;border-radius:4px;">View Code</button></a>
                     ''',
                     unsafe_allow_html=True)
     with col5:
@@ -133,11 +133,11 @@ with st.container():
         st.subheader("Advertisement Web Page")
         st.write("Tinder but for our four-legged friend's web.")
         st.markdown(f'''
-                    <a href={TINDOG}><button style="background-color:GreenYellow;">See it live</button></a>
+                    <a href={TINDOG}><button style="background-color:#04AA6D; color:white;border:none;border-radius:4px;">See it live</button></a>
                     ''',
                     unsafe_allow_html=True)
         st.markdown(f'''
-                    <a href={TINDOG_CODE}><button style="background-color:GreenYellow;">View Code</button></a>
+                    <a href={TINDOG_CODE}><button style="background-color:greenyellow; color:black;border:none;border-radius:4px;">View Code</button></a>
                     ''',
                     unsafe_allow_html=True)
     with col6:
@@ -145,11 +145,11 @@ with st.container():
         st.subheader("Responsive Portfolio Website ")
         st.write("Portfolio Website made with HTML/CSS/JS.")
         st.markdown(f'''
-        <a href={"https://alvarezmike.github.io/Responsive-Portfolio/"}><button style="background-color:GreenYellow;">See it live</button></a>
+        <a href={"https://alvarezmike.github.io/Responsive-Portfolio/"}><button style="background-color:#04AA6D; color:white;border:none;border-radius:4px;">See it live</button></a>
         ''',
                     unsafe_allow_html=True)
         st.markdown(f'''
-                <a href={"https://github.com/alvarezmike/Responsive-Portfolio"}><button style="background-color:GreenYellow;">View Code</button></a>
+                <a href={"https://github.com/alvarezmike/Responsive-Portfolio"}><button style="background-color:greenyellow; color:black;border:none;border-radius:4px;">View Code</button></a>
                 ''',
                     unsafe_allow_html=True)
 
