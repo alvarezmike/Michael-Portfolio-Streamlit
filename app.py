@@ -46,7 +46,7 @@ local_css("style/style.css")
 
 # -- Load assets
 lottie_coding = load_lottieur("https://assets2.lottiefiles.com/packages/lf20_l4fgppor.json")
-img_password_manager = Image.open("images/passwordmanager.png")
+
 
 # -- header section
 with st.container():
@@ -74,7 +74,7 @@ with st.container():
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
+        st.image("images/NBAWebApp-preview-portfolio.png")
         st.subheader("NBA Data Web App")
         st.write("Web scrapes data and formats into a beautiful stats display web app where you "
                  "can select data based on year and teams as well as player roles. ")
@@ -87,7 +87,7 @@ with st.container():
                     ''',
                     unsafe_allow_html=True)
     with col2:
-        st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
+        st.image("images/StockWebApp-preview-portfolio.png")
         st.subheader("Stock Price Web App")
         st.write("Retrieves company information as well as the stock price data.")
         st.markdown(f'''
@@ -99,7 +99,7 @@ with st.container():
                     ''',
                     unsafe_allow_html=True)
     with col3:
-        st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
+        st.image("images/PassManager-preview-portfolio.png")
         st.subheader("Password Manager")
         st.write("Tkinter GUI App that manages all your passwords.")
         st.markdown(f'''
@@ -115,7 +115,7 @@ with st.container():
 with st.container():
     col4, col5, col6 = st.columns(3)
     with col4:
-        st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
+        st.image("images/CRUD-preview-portfolio.png")
         st.subheader("Data Entry Desktop App")
         st.write("Tkinter GUI with MySQL database connection.")
         st.markdown(f'''
@@ -127,7 +127,7 @@ with st.container():
                     ''',
                     unsafe_allow_html=True)
     with col5:
-        st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
+        st.image("images/TinDog-preview-portfolio.png")
         st.subheader("Advertisement Web Page")
         st.write("Tinder but for our four-legged friend's web.")
         st.markdown(f'''
@@ -139,7 +139,7 @@ with st.container():
                     ''',
                     unsafe_allow_html=True)
     with col6:
-        st.image("https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/NewsImages/08172020000734AM/Learn-Python.png")
+        st.image("images/Mobile-preview-portfolio.png")
         st.subheader("Responsive Portfolio Website ")
         st.write("Portfolio Website made with HTML/CSS/JS.")
         st.markdown(f'''
