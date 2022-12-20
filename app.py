@@ -2,13 +2,12 @@ import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
-import webbrowser
 from pathlib import Path
 
 # LINKS PROJECTS
-NBA_WEB_APP = "https://alvarezmike-nba-streamlit-app-gmo44q.streamlitapp.com/"
+NBA_WEB_APP = "https://nbastatistic.streamlit.app/"
 NBA_WEB_APP_CODE = "https://github.com/alvarezmike/NBA-Streamlit"
-STOCK_STREAMLIT = "https://alvarezmike-stock-streamlit-app-dscgjt.streamlitapp.com/"
+STOCK_STREAMLIT = "https://stock-eda.streamlit.app/"
 STOCK_CODE = "https://github.com/alvarezmike/Stock-Streamlit"
 TINDOG = "https://alvarezmike.github.io/TinDog-Advertisement/"
 TINDOG_CODE = "https://github.com/alvarezmike/TinDog-Advertisement"
@@ -66,7 +65,6 @@ with st.container():
 
     with right_column:
         st_lottie(lottie_coding, height=300, key="coding_1")
-
 
 
 # -- Projects
