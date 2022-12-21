@@ -101,7 +101,7 @@ with st.container():
     with col3:
         st.image("images/PassManager-preview-portfolio.png")
         st.subheader("Password Manager")
-        st.write("Tkinter GUI App that manages all your passwords.")
+        st.write("Desktop app to manage and store passwords.")
         st.markdown(f'''
                     <a href={PASSWORD_MANAGER_VIDEO}><button style="background-color:#04AA6D; color:white;border:none;border-radius:4px;">Video Demo</button></a>
                     ''',
@@ -117,7 +117,7 @@ with st.container():
     with col4:
         st.image("images/CRUD-preview-portfolio.png")
         st.subheader("Data Entry Desktop App")
-        st.write("Tkinter GUI with MySQL database connection.")
+        st.write("Desktop app for data entry with external database connection.")
         st.markdown(f'''
                     <a href={CRUD_VIDEO}><button style="background-color:#04AA6D; color:white;border:none;border-radius:4px;">Video Demo</button></a>
                     ''',
@@ -141,7 +141,7 @@ with st.container():
     with col6:
         st.image("images/Mobile-preview-portfolio.png")
         st.subheader("Responsive Portfolio Website ")
-        st.write("Portfolio Website made with HTML/CSS/JS.")
+        st.write("A portfolio made with a mobile-first design approach.")
         st.markdown(f'''
         <a href={"https://alvarezmike.github.io/Responsive-Portfolio/"}><button style="background-color:#04AA6D; color:white;border:none;border-radius:4px;">See it live</button></a>
         ''',
