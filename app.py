@@ -19,7 +19,7 @@ PASSWORD_MANAGER_CODE = "https://github.com/alvarezmike/100daysOfPython/tree/mai
 
 # Path settings
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-resume_file = current_dir/"Michael Alvarez Resume.pdf"
+resume_file = current_dir/"Michael Alvarez Resume .pdf"
 
 # Load PDF
 with open(resume_file, "rb") as pdf_file:
